@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Decision Matrix</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1><b>Decision Matrix</b></h1>
+      <br/>
+      <div id="decision-form" class="well">
+        <form name="decisionForm">
+          <label for="urgency">Urgency</label>
+          <select class="form-control" name="urgency" >
+            <option value="critical">Critical</option>
+            <option value="high">High</option>
+            <option value="normal">Normal</option>
+            <option value="low">Low</option>
+            <option value="none">None</option>
+          </select><br/>
+
+          <label for="importance">Importance</label> 
+          <select class="form-control" name="importance">
+            <option value="critical">Critical</option>
+            <option value="high">High</option>
+            <option value="normal">Normal</option>
+            <option value="low">Low</option>
+            <option value="none">None</option>
+          </select><br/>
+
+          <label for="decision-desc">Describe your decision:</label> 
+          <textarea class="form-control" name="decisionDesc"></textarea> 
+          <div id="decision-output"></div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+        $("#decisionForm").submit(function() {
+          var urgency = $("select[name='urgency']").val(); 
+          var importance = $("select[name='importance']").val(); 
+
+          // This is the default response from our server. It is a string that contains
+          // the html that will be used as the output of the form submission.
+          var responseHtml = "<div class='alert alert-danger'> <strong>Default Response</strong><br/>This is the default response.</div>";
+
+          /*
+            This is where you will use the urgency and importance variables to 
+            compute a decision that can be displayed in responseHtml. Please follow 
+            the steps below:
+            - Use the urgency variable to determine which of the 5 possible 
+              values there are that correspond to each row on the urgency matrix
+              (see "Urgency Matrix" section at the top). For example, the "normal"
+              row corresponds to the "Normal" column in our matrix. 
+            - Similarly for the importance variable, use it to determine which of
+              the 5 possible values there are that correspond to each column on 
+              the importnace matrix (see "Importance Matrix" section at the top). 
+              For example, the "normal" column corresponds to the "Normal" row in our
+              matrix.
+            - Use the urgency and importance variables to determine which of the 25
+              possible decision combinations that exist in our matrix correspond with
+              the combination of urgency value and importnace value you chose. The
+              corresponding 3-letter code will be used as your responseHtml string.
+              For example, a responseHtml string for a "High" urgency and 
+              "Normal" importance is "hni".
+            - Replace the placeholder "Default Response" in responseHtml with text 
+              that describes what you have determined to be appropriate for the 
+              combination of urgency value and importnace values you chose. 
+          */
+
+          // Write your code here!
+
+          $("#decision-output").html(responseHtml); 
+        });
+      })
+    </script>
+  </body>
+</html> 
