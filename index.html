@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Manager</title> <!-- Updated the title to match the user's edit -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Post Manager</h1>
+
+        <div>
+    <h2>Create Post</h2>
+            <input id="userIdCreate" type="text" placeholder="User ID"> <!-- Updated ID to userIdCreate -->
+            <input id="titleCreate" type="text" placeholder="Title"> <!-- Updated ID to titleCreate -->
+            <textarea id="bodyCreate" placeholder="Body"></textarea> <!-- Updated ID to bodyCreate -->
+            <button id="createPostButton">Create Post</button>
+        </div>
+
+        <div>
+            <h2>Update/Delete Post</h2>
+            <input id="postId" type="text" placeholder="Post ID">
+            <input id="updateTitle" type="text" placeholder="New Title">
+            <textarea id="updateBody" placeholder="New Body"></textarea>
+            <button id="updatePostButton">Update Post</button> <!-- Updated to use ID instead of inline onclick -->
+            <button id="deletePostButton">Delete Post</button> <!-- Updated to use ID instead of inline onclick -->
+        </div>
+
+        <div>
+            <h2>Patch Post</h2>
+            <input id="patchPostId" type="text" placeholder="Post ID">
+            <input id="editTitle" type="text" placeholder="Edit Title">
+            <textarea id="editBody" placeholder="Edit Body"></textarea>
+            <button id="patchPostButton">Patch Post</button> <!-- Updated to use ID instead of inline onclick -->
+        </div>
+
+        <div>
+            <h2>Posts</h2>
+            <ul id="postsList"></ul>
+        </div>
+    </div>
+    
+    <div id="errorContainer" style="color: red; display: none;"></div> <!-- Added error display container -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>

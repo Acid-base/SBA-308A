@@ -1,0 +1,18 @@
+{
+  "name": "sba-308a",
+  "version": "1.0.0",
+  "description": "This project demonstrates how to interact with APIs using JavaScript. It includes functionalities for fetching, creating, updating, and deleting posts. This application is designed to help new developers understand how to work with APIs in JavaScript using Fetch API, async/await, and modular JavaScript design patterns. It doesn't have a real backend, so it's not possible to create, update, or delete posts and view changes, but the developer debugging tools can be used to see the example API requests and responses.",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "http-server": "^14.1.1",
+    "node": "^18.20.2",
+    "nodemon": "^3.1.0"
+  }
+}
